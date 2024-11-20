@@ -218,10 +218,10 @@
 
 		// UI To Top
 		if (isDesktop && !isNoviBuilder) {
-			$().UItoTop({
-				easingType: 'easeOutQuad',
-				containerClass: 'ui-to-top fa fa-angle-up'
-			});
+			$().UItoTop( {
+				easingType: 'easeOutQuart',
+				containerClass: 'ui-to-top icon icon-xs icon-circle icon-darker-filled mdi mdi-chevron-up'
+			} );
 		}
 
 		// RD Navbar
@@ -469,4 +469,3 @@
 
 	});
 }());
-	
