@@ -1,4 +1,51 @@
+@media screen and (max-width: 768px) {
+  .container-proker {
+    height: 900px;
+    padding: 20px;
+    flex-direction: column;
+  }
 
+  .card-proker {
+    margin: 20px auto !important;
+    left: 0 !important;
+    width: 100%;
+    max-width: 280px;
+  }
+
+  /* Reset hover effects di mobile */
+  .card-proker:hover {
+    transform: none;
+  }
+
+  .card-proker:hover~.card-proker {
+    left: 0;
+  }
+
+  /* Optional: Adjust title and description position for better mobile view */
+  .title-proker {
+    top: 40%;
+  }
+
+  .card-proker:hover .title-proker {
+    top: 25%;
+  }
+
+  .description {
+    top: 55%;
+  }
+}
+
+.container-proker {
+  position: relative;
+  height: 300px;
+  display: flex;
+  width: 100%;
+  max-width: 1000px;
+  top: 60px;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 .card-container {
   display: flex;
   flex-direction: column;
@@ -7,10 +54,140 @@
   max-width: 1200px;
   margin: 0 auto;
 }
+.card-proker {
+  display: flex;
+  height: 280px;
+  width: 100%;
+  background-color: #17141d;
+  border-radius: 10px;
+  box-shadow: 0px 1px 1px rgba(3, 7, 18, 0.12),
+    0px 5px 4px rgba(3, 7, 18, 0.13),
+    0px 12px 9px rgba(3, 7, 18, 0.15),
+    0px 20px 15px rgba(3, 7, 18, 0.16),
+    0px 32px 24px rgba(3, 7, 18, 0.18);
+  transition: 0.4s ease-out;
+  position: relative;
+  left: 0px;
+  overflow: hidden; /* Penting untuk animasi deskripsi */
+}
+
+.title-proker {
+  color: white;
+  font-weight: 300;
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  width: calc(100% - 40px);
+  transition: 0.4s ease-out;
+}
+
+.description {
+  color: white;
+  font-size: 0.85em;
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  top: 50%;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.4s ease-out;
+}
+/* Saat hover, geser title ke atas dan tampilkan deskripsi */
+.card-proker:hover .title-proker {
+  top: 30%;
+  font-size: 20px;
+  font-weight: 700;
+}.card-proker:hover .description {
+  opacity: 1;
+  transform: translateY(0);
+}
+.card-proker:not(:first-child) {
+  margin-left: -50px;
+}
+
+.card-proker:hover {
+  transform: translateY(-20px);
+  transition: 0.4s ease-out;
+}
+
+.card-proker:hover~.card-proker {
+  position: relative;
+  left: 50px;
+  transition: 0.4s ease-out;
+}
+
+.title-proker {
+  color: white;
+  font-weight: 300;
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  /* Ini akan memposisikan text tepat di tengah secara vertikal */
+  text-align: center;
+  width: calc(100% - 40px);
+  /* Memberikan ruang 20px di kiri dan kanan */
+}
+
+.bar {
+  top:10px;
+  position: absolute;
+  left: 20px;
+  height: 5px;
+  width: 85%;
+}
+
+.emptybar {
+  background-color: #2e3033;
+  width: 100%;
+  height: 100%;
+}
+
+.filledbar {
+  position: absolute;
+  top: 0px;
+  z-index: 3;
+  width: 0px;
+  height: 100%;
+  background: rgb(0, 154, 217);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(0, 128, 0, 1) 65%, rgba(0, 128, 0, 1) 100%);
+  transition: 0.6s ease-out;
+}
+
+.card-proker:hover .filledbar {
+  width: 100%;
+  transition: 0.4s ease-out;
+}
+
+.circle {
+  position: absolute;
+  top: 150px;
+  left: calc(50% - 60px);
+}
+
+.stroke {
+  stroke: white;
+  stroke-dasharray: 360;
+  stroke-dashoffset: 360;
+  transition: 0.6s ease-out;
+}
+
+svg {
+  fill: #17141d;
+  stroke-width: 2px;
+}
+
+.card-proker:hover .stroke {
+  stroke-dashoffset: 100;
+  transition: 0.6s ease-out;
+}
 
 .profile-card {
   position: relative;
-  height: 450px;
+  height: 350px;
   border-radius: 15px;
   overflow: hidden;
   background-size: cover;
