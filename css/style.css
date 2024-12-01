@@ -1,3 +1,22 @@
+.custom-my-button {
+  background-color: #007bff;
+  color: white;
+  border-radius: 50%;
+  padding: 10px;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 99;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+}
+
+.custom-my-button:hover {
+  background-color: #0056b3;
+  /* Warna saat dihover */
+}
+
 @media screen and (max-width: 768px) {
   .container-proker {
     height: 100% !important;
